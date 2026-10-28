@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101b21"><meta name="description" content="A small circuit puzzle with a real hamster-powered twist. Rotate the pipes, light three burrows, and play a new board from Squeekchain's public Sepolia data."><title>Squeek Circuit — Keep the burrows glowing</title><link rel="icon" href="./favicon.svg"><link rel="stylesheet" href="./style.css"></head>
+<body>
+<a class="skip" href="#board">Skip to puzzle</a>
+<header class="topbar"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">⌁</span> squeek<span class="brand-light">circuit</span></a><span class="edition">FIELD EXPERIMENT / 001</span><a class="source-link" href="https://github.com/madril111/SqueekCircuit" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a></header>
+<main>
+<section class="intro"><div><p class="eyebrow"><span class="tiny-star">✳</span> LITTLE WHEEL. BRIGHT IDEAS.</p><h1>Keep the burrows<br><em>glowing.</em></h1></div><div class="intro-right"><p>One hamster. Three sleepy homes.<br>Turn the circuits. Let the energy flow.</p><span class="tag"><span class="dot"></span> Built with Squeekchain</span></div></section>
+<div class="workspace">
+<section class="machine" aria-label="Circuit puzzle">
+ <div class="machine-heading"><div><span class="live-dot" id="data-dot"></span><span id="mode-label">PRACTICE CIRCUIT</span></div><span id="board-code">BOARD —</span></div>
+ <div class="playfield">
+  <div class="wheel-source"><span class="side-label">THE WHEEL</span><div class="wheel" aria-hidden="true"><div class="wheel-spokes"></div><svg class="hamster" viewBox="0 0 80 70"><ellipse cx="42" cy="44" rx="23" ry="17" fill="#eecf99"/><circle cx="55" cy="33" r="14" fill="#f5dfb6"/><circle cx="51" cy="21" r="7" fill="#eecf99"/><circle cx="51" cy="21" r="3.5" fill="#db9c80"/><circle cx="60" cy="31" r="2.6" fill="#172128"/><ellipse cx="68" cy="38" rx="3" ry="2.4" fill="#df9a82"/><ellipse cx="27" cy="58" rx="10" ry="3" fill="#eecf99"/><ellipse cx="53" cy="58" rx="9" ry="3" fill="#eecf99"/></svg></div><span class="source-caption">SQUEEK IN</span></div>
+  <div class="board-frame"><div id="board" class="board" role="group" aria-label="Five by five circuit. Rotate tiles to connect the wheel on the left to three burrows on the right."></div></div>
+  <div class="burrows" aria-label="Burrow status"><div class="burrow" id="burrow-0"><span class="house">⌂</span><span>01</span></div><div class="burrow" id="burrow-1"><span class="house">⌂</span><span>02</span></div><div class="burrow" id="burrow-2"><span class="house">⌂</span><span>03</span></div></div>
+ </div>
+ <div class="machine-bottom"><span><span class="connection-key"></span> <strong id="connected-count">0 / 3</strong> burrows connected</span><span class="tap-note">Tap a tile to turn it ↻</span></div>
+ <div class="win-banner" id="win-banner" hidden><div><p class="eyebrow">THE NEIGHBORHOOD IS AWAKE</p><h2>Small paws. Full power.</h2><p id="win-copy"></p></div><div class="score-badge"><strong id="final-score">0</strong><span>POINTS</span></div></div>
+</section>
+<aside class="sidebar">
+ <section class="control-panel"><p class="eyebrow">YOUR SHIFT</p><div class="stats"><div><span>Turns</span><strong id="moves">00</strong></div><div><span>Time</span><strong id="timer">0:00</strong></div></div><div class="divider"></div><div class="best-row"><span>Best on this board</span><strong id="best">—</strong></div><button class="primary" id="new-board">Load latest round <span>↗</span></button><div class="small-actions"><button id="reset">↺ Reset</button><button id="hint">✧ Hint</button><button id="pause">Ⅱ Pause</button></div><p class="action-status" id="action-status" role="status" aria-live="polite">Your first turn starts the clock.</p></section>
+ <section class="instructions"><div class="section-number">01—03</div><h2>A little rewiring.</h2><ol><li><b>Rotate</b> the tiles to line up their ends.</li><li><b>Connect</b> the wheel to all three burrows.</li><li><b>Save turns.</b> Fewer turns and hints mean more points.</li></ol><p class="keyboard-hint">Keyboard: Tab + Enter · Shift-click turns back · P pauses</p></section>
+ <div class="note"><span aria-hidden="true">✷</span><p>Every settled round can bring a new puzzle.<br><b>The hamster sets the blueprint.</b></p></div>
+</aside></div>
+<details class="data-panel"><summary><span><span class="dot"></span> THE HAMSTER BEHIND THE PUZZLE</span><span id="data-summary">Checking public Sepolia data…</span></summary><div class="data-content"><p id="provenance">Practice boards work even when the hamster's public API is unreachable.</p><div class="data-links"><a id="core-link" href="https://docs.squeekchain.com/developers/api/" target="_blank" rel="noopener noreferrer">API documentation ↗</a><a id="tx-link" href="https://api.squeekchain.com/v1/core" target="_blank" rel="noopener noreferrer">Official API ↗</a></div></div></details>
+<footer><span>Made for curious humans & very small engineers.</span><span>Independent community game · Personal scores · No wallet needed</span></footer>
+</main>
+<dialog id="confirm-dialog"><form method="dialog"><p class="eyebrow">A FRESH CIRCUIT?</p><h2>Leave this puzzle?</h2><p>Your current turns will be cleared.</p><div class="dialog-actions"><button value="cancel">Keep playing</button><button value="confirm" class="primary">Start fresh</button></div></form></dialog>
+<script type="module" src="./game.mjs"></script></body></html>

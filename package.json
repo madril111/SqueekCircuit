@@ -1,0 +1,14 @@
+{
+  "name": "squeek-circuit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A circuit puzzle using Squeekchain's public Sepolia API.",
+  "scripts": {
+    "start": "node serve.mjs",
+    "test": "node --test engine.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
